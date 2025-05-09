@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rifan's World | Basket & Petualangan</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #e74c3c;
+            --secondary-color: #3498db;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-color);
+            line-height: 1.7;
+            background-color: #f9f9f9;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1790&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 0 6rem;
+            text-align: center;
+        }
+ 
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--dark-color);
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .basket-theme {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .travel-theme {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .badge-theme {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 0;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline:before {
+            content: "";
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-bottom: 30px;
+        }
+        
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: -30px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            border: 3px solid white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#" style="color: var(--primary-color);">RIFAN'S BLOG</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Tentang Saya</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#basket">Basket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#traveling">Traveling</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <img src="c:\Users\COWOSEMPURNA\Videos\img\WhatsApp Image 2025-05-09 at 09.26.58_25b44378.jpg" alt="Rifan Muhamad Supriatna" class="profile-img rounded-circle mb-4">
+            <h1 class="display-4 fw-bold mb-3">Rifan Muhamad Supriatna</h1>
+            <p class="lead mb-4">Basket & Adventure </p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#basket" class="btn btn-danger btn-lg px-4"><i class="fas fa-basketball-ball me-2"></i>Basket</a>
+                <a href="#traveling" class="btn btn-primary btn-lg px-4"><i class="fas fa-mountain me-2"></i>Traveling</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Tentang Saya</h2>
+                    <p class="lead">Halo! Saya Rifan Muhamad Supriatna, seorang pecinta olahraga basket dan petualangan alam.</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-basketball-ball fa-3x mb-3" style="color: var(--primary-color);"></i>
+                            <h3>Passion Basket</h3>
+                            <p>Saya telah bermain basket sejak SD dan terus mengembangkan kemampuan hingga sekarang. Basket bukan hanya olahraga bagi saya, tapi juga gaya hidup.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-mountain fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                            <h3>Traveling</h3>
+                            <p>Saya sangat menikmati perjalanan ke tempat-tempat alam terutama sungai dan pegunungan. Setiap perjalanan adalah cerita baru yang berharga.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Basket Section -->
+    <section id="basket" class="py-5 basket-theme">
+        <div class="container">
+            <h2 class="text-center text-white mb-5">Passion Basket</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1790&q=80" class="card-img-top" alt="Basketball">
+                        <div class="card-body">
+                            <h3 class="card-title">Perjalanan Basket Saya</h3>
+                            <div class="timeline mt-4">
+                                <div class="timeline-item">
+                                    <h5></h5>
+                                    <p>mulai dari sd</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h5>2016</h5>
+                                    <p>Mengikuti kompetisi lokal pertama</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Hal yang Saya Sukai dari Basket</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Kerja tim dan sportivitas</li>
+                                <li class="list-group-item">Adrenalin saat bermain kompetitif</li>
+                                <li class="list-group-item">Kesehatan fisik dan mental</li>
+                                <li class="list-group-item">Komunitas yang solid</li>
+                                <li class="list-group-item">Strategi permainan</li>
+                            </ul>
+                            <div class="mt-4">
+                                <h4>Pemain Favorit:</h4>
+                                <span class="badge-theme me-2">Michael Jordan</span>
+                                <span class="badge-theme me-2">Kobe Bryant</span>
+                                <span class="badge-theme">LeBron James</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traveling Section -->
+    <section id="traveling" class="py-5 travel-theme">
+        <div class="container">
+            <h2 class="text-center text-white mb-5">Petualangan Traveling</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <img src= class="card-img-top" alt="Adventure">
+                        <div class="card-body">
+                            <h3 class="card-title">Destinasi tempat alam  Favorit</h3>
+                            <p>Saya sangat menikmati eksplorasi alam yang indah di Indonesia. Berikut beberapa yang pernah saya kunjungi:</p>
+                            <ul>
+                                <li>watu kodok - yogyakarta</li>
+                                <li>sanghyang kenit - kabupaten bandung</li>
+                                <li>dan berbagai tempat lainnya</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Kisah Perjalanan</h3>
+                            <p>Setiap perjalanan selalu meninggalkan kenangan yang berharga. Dari perjalanan yang menantang,perjalanan yang melelah kan akan tetapi semua itu akan tergantikan dengan kecantikan alam.</p>
+                            <div class="mt-4">
+                                <h4>Tips Traveling :</h4>
+                                <ol>
+                                    <li>Selalu periksa kondisi cuaca</li>
+                                    <li>Bawa peralatan keselamatan</li>
+                                    <li>Pelajari medan terlebih dahulu</li>
+                                    <li>Hormati adat setempat</li>
+                                    <li>Jaga kebersihan lingkungan</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Galeri</h2>
+            <div class="row g-3">
+                <div class="col-md-4 col-6">
+                    <img src="c:\Users\COWOSEMPURNA\Videos\img\WhatsApp Image 2025-05-09 at 11.26.16_d79972ec.jpg" alt="Basket" class="img-fluid rounded">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="c:\Users\COWOSEMPURNA\Videos\img\WhatsApp Image 2025-05-09 at 11.26.17_7ec07a78.jpg" alt="River" class="img-fluid rounded">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="c:\Users\COWOSEMPURNA\Videos\img\WhatsApp Image 2025-05-09 at 11.30.41_f2191b67.jpg" alt="Basket Game" class="img-fluid rounded">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="c:\Users\COWOSEMPURNA\Videos\img\WhatsApp Image 2025-05-09 at 11.31.01_82839bde.jpg" alt="River Adventure" class="img-fluid rounded">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="c:\Users\COWOSEMPURNA\Videos\img\WhatsApp Image 2025-05-09 at 11.32.43_be1a0aff.jpg" alt="Basket Team" class="img-fluid rounded">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="c:\Users\COWOSEMPURNA\Videos\img\WhatsApp Image 2025-05-09 at 11.40.02_8e0d4424.jpg" alt="Nature" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Hubungi Saya</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title mb-4"><i class="fas fa-envelope me-2"></i>Kirim Pesan</h3>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Nama Anda</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Pesan</label>
+                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Kirim</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title mb-4"><i class="fas fa-info-circle me-2"></i>Info Kontak</h3>
+                            <div class="mb-4">
+                                <h5><i class="fas fa-map-marker-alt me-2"></i> Lokasi</h5>
+                                <p>Kota Anda, Indonesia</p>
+                            </div>
+                            <div class="mb-4">
+                                <h5><i class="fas fa-envelope me-2"></i> Email</h5>
+                                <p>rifan.supriatna@example.com</p>
+                            </div>
+                            <div class="mb-4">
+                                <h5><i class="fas fa-phone me-2"></i> Telepon</h5>
+                                <p>+62 812 3456 7890</p>
+                            </div>
+                            <div>
+                                <h5 class="mb-3">Media Sosial</h5>
+                                <div class="d-flex">
+                                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">Rifan Muhamad Supriatna</h5>
+                    <p>Sebuah blog tentang passion basket dan petualangan traveling ke berbagai tempat  alam.</p>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="mb-4">Menu</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#about" class="text-white text-decoration-none">Tentang</a></li>
+                        <li class="mb-2"><a href="#basket" class="text-white text-decoration-none">Basket</a></li>
+                        <li><a href="#traveling" class="text-white text-decoration-none">Traveling</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-4">Kontak</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> rifanmuchtarsupriatna@gmail.com</li>
+                        <li><i class="fas fa-phone me-2"></i> +6283829092027</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 Rifan Muhamad Supriatna.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
